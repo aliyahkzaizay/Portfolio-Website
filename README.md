@@ -4,6 +4,8 @@ This is my personal portfolio website showcasing my work in software development
 
 The site highlights selected projects, a short introduction about me, and ways to connect. It’s designed to be clean, responsive, and accessible across desktop, tablet, and mobile.
 
+![Portfolio Preview](assets/Portfolio-WebsiteUI.png)
+
 ## Tech Stack
 - HTML
 - CSS

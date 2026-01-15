@@ -1,0 +1,417 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aliyah Zaizay | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Fonts (Ysabeau Office Black + Yeseva One Regular) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@900&family=Yeseva+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Sticky Navbar -->
+  <header class="topbar" id="top">
+    <div class="topbar__inner container">
+
+      <!-- Social icons (left) -->
+      <div class="socials" aria-label="Social links">
+        <a class="icon-btn" href="https://www.linkedin.com/in/aliyah-zaizay/" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="icon-btn icon-btn--dark" href="https://github.com/aliyahkzaizay" aria-label="GitHub" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="icon-btn icon-btn--gold" href="https://www.instagram.com/aliyahh.kz/" aria-label="Instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- Nav pill -->
+      <nav class="navpill" aria-label="Primary">
+
+        <!-- Hamburger menu -->
+            <!--- 
+                aria-* - for accessiblity 
+
+                    + aria-label - for screen readers "open menu"
+                    + aria-controls= "mobileMenu" - this button controls the element with id mobileMenu
+                        - desribes a relationship
+                        when press buton, it will affecrt that specific menu container (somewhere else in HTML)
+                    + aria-expanded="false" - menu is currently closed (status flag)
+
+
+                type="button" - wont submit anything. 
+
+                <button> ☰ </button> - visual users see the icon
+                aria-label="Open menu" - screen readers see title
+            -->
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          ☰
+        </button>
+
+            
+        <!-- Nav links  -->
+        
+        <ul class="navlinks" id="desktopNav">
+          <li><a class="navlink is-active" href="#home" aria-current="page">home</a></li>
+          <li><a class="navlink" href="#work">work</a></li>
+          <li><a class="navlink" href="#about">about</a></li>
+          <li><a class="navlink" href="assets/SWE_AliyahZaizay_Resume.pdf" target="_blank">resume</a></li>
+          <li><a class="navlink" href="#contact">contact</a></li>
+        </ul>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-menu" id="mobileMenu" hidden>
+          <a class="mobile-link" href="#home">home</a>
+          <a class="mobile-link" href="#work">work</a>
+          <a class="mobile-link" href="#about">about</a>
+          <a class="mobile-link" href="assets/SWE_AliyahZaizay_Resume.pdf">resume</a>
+          <a class="mobile-link" href="#contact">contact</a>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero reveal-section">
+      <div class="hero__bg">
+        <div class="bg-shape bg-shape--a"></div>
+        <div class="bg-shape bg-shape--b"></div>
+        <div class="bg-lines"></div>
+      </div>
+
+      <div class="hero__inner container reveal-item">
+        <h1 class="hero__name">ALIYAH ZAIZAY</h1>
+        <p class="hero__sub">welcome to my portfolio.</p>
+      </div>
+
+      <div class="role-strip reveal-item">
+        <div class="container role-strip__inner">
+          <p class="role-strip__text">
+            Aspiring Site Reliability Engineer • Full-Stack Developer • DevOps &amp; Cloud
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section section--work reveal-section">
+      <div class="section-title-strip reveal-item">
+        <h2>WORK</h2>
+      </div>
+
+      <div class="container work-card reveal-item">
+        <div class="tabs" role="tablist" aria-label="Work categories">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="dev">
+            Developement
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="design">
+            Design &amp; Data Viz
+          </button>
+        </div>
+
+        <div class="work-panels">
+          <!-- DEV PANEL -->
+          <div class="panel is-active" data-panel="dev" role="tabpanel">
+            <div class="projects-grid">
+              <article class="project" tabindex="0"
+                data-title="RPI Dorms — Open Source Web Application"
+                data-desc="A full-stack web app that helps RPI students explore dorms with data, visuals, and student-friendly browsing."
+                data-tech="React • Node • API • UI"
+                data-link="#"
+              >
+                <div class="project__thumb"></div>
+                <div class="project__body">
+                  <h3 class="project__title">RPI Dorms<br/>Open Source Web Application</h3>
+                  <p class="project__desc">A full-stack web app that showcases campus dorms better for students.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">technologies used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project" tabindex="0"
+                data-title="DriveSmart — Learning + Gaming Hub"
+                data-desc="A gamified driver-education site with quick lessons and quiz-based mini-games."
+                data-tech="HTML • CSS • JavaScript"
+                data-link="#"
+              >
+                <div class="project__thumb"></div>
+                <div class="project__body">
+                  <h3 class="project__title">DriveSmart<br/>Learning + Gaming Hub</h3>
+                  <p class="project__desc">Gamified driver ed with a learning hub + games that reinforce concepts.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">technologies used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project" tabindex="0"
+                data-title="Automation Scripts — Ops Helpers"
+                data-desc="Small scripts to automate repetitive workflows, file cleanup, and simple reporting."
+                data-tech="Python • Bash"
+                data-link="#"
+              >
+                <div class="project__thumb"></div>
+                <div class="project__body">
+                  <h3 class="project__title">Automation<br/>Ops Helpers</h3>
+                  <p class="project__desc">Scripts that reduce manual steps and keep workflows consistent.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">technologies used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- DESIGN PANEL -->
+          <div class="panel" data-panel="design" role="tabpanel" hidden>
+            <div class="projects-grid">
+              <article class="project" tabindex="0"
+                data-title="Pure Crafts — Brand Identity"
+                data-desc="Minimalist brand direction exploring eco-tech themes through a mineral-blue palette."
+                data-tech="Illustrator • Figma"
+                data-link="#"
+              >
+                <div class="project__thumb project__thumb--alt"></div>
+                <div class="project__body">
+                  <h3 class="project__title">Pure Crafts<br/>Brand Identity</h3>
+                  <p class="project__desc">Logo explorations + palette + digital mockups for a clean eco-tech vibe.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">tools used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project" tabindex="0"
+                data-title="Data Viz — Interactive Charts"
+                data-desc="Small visualizations and dashboards focused on clarity and storytelling."
+                data-tech="D3 • Charting • Figma"
+                data-link="#"
+              >
+                <div class="project__thumb project__thumb--alt"></div>
+                <div class="project__body">
+                  <h3 class="project__title">Data Viz<br/>Interactive Charts</h3>
+                  <p class="project__desc">Visual storytelling: clean labels, readable color, and meaningful interaction.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">tools used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project" tabindex="0"
+                data-title="Flyers + Social — Campus Comms"
+                data-desc="Event graphics and social layouts for student orgs: cohesive, bold, and readable."
+                data-tech="Canva • Photoshop"
+                data-link="#"
+              >
+                <div class="project__thumb project__thumb--alt"></div>
+                <div class="project__body">
+                  <h3 class="project__title">Flyers + Social<br/>Campus Comms</h3>
+                  <p class="project__desc">Posters, IG slides, and event promos with a consistent visual system.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">tools used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project" tabindex="0"
+                data-title="Flyers + Social — Campus Comms"
+                data-desc="Event graphics and social layouts for student orgs: cohesive, bold, and readable."
+                data-tech="Canva • Photoshop"
+                data-link="#"
+              >
+                <div class="project__thumb project__thumb--alt"></div>
+                <div class="project__body">
+                  <h3 class="project__title">Flyers + Social<br/>Campus Comms</h3>
+                  <p class="project__desc">Posters, IG slides, and event promos with a consistent visual system.</p>
+                  <div class="project__meta">
+                    <span class="meta-label">tools used</span>
+                    <div class="tech-dots" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--about reveal-section">
+      <div class="about-bg reveal-item">
+        <div class="container about-wrap">
+          <div class="about-left">
+            <div class="photo-frame" aria-label="Photo area (replace with your image)">
+              <!-- Replace placeholder with your photo:
+              <img src="assets/aliyah.jpg" alt="Aliyah Zaizay" />
+              -->
+              <div class="photo-placeholder"></div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <h2 class="about-title"><span>about</span> <em>me</em></h2>
+
+            <div class="tabs tabs--about" role="tablist" aria-label="About tabs">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-about="about">
+                about me
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-about="skills">
+                skills
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-about="certs">
+                certificates
+              </button>
+            </div>
+
+            <div class="about-panels">
+              <div class="about-panel is-active" data-about-panel="about">
+                <p class="about-text">
+                  I’m a computer science student with a minor in graphic design at Rensselaer Polytechnic Institute (RPI).
+                 
+                </p>
+              </div>
+
+              <div class="about-panel" data-about-panel="skills" hidden>
+                <ul class="list">
+                  <li><strong>Development:</strong> HTML, CSS, JavaScript, React, Python</li>
+                  <li><strong>Ops:</strong> Linux basics, Git/GitHub, scripting, CI/CD concepts</li>
+                  <li><strong>Design:</strong> Figma, Illustrator, Photoshop, InDesign</li>
+                </ul>
+              </div>
+
+              <div class="about-panel" data-about-panel="certs" hidden>
+                <ul class="list">
+                  <li>Codepaths TIP 102 2025</li>
+                </ul>
+                <!-- <p class="hint">(Add real certificates here when you’re ready.)</p> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact reveal-section">
+      <div class="container contact-wrap reveal-item">
+        <div class="contact-title">
+          <h2>Lets Connect!</h2>
+          <div class="time-pill" id="etTime" aria-live="polite">ET</div>
+        </div>
+
+        <div class="contact-card">
+          <form class="form" id="contactForm">
+            <label class="sr-only" for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
+
+            <label class="sr-only" for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="Your email" />
+
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+
+            <button class="btn btn--small" type="submit">Send</button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-side">
+            <p class="side-title">socials</p>
+            <div class="side-icons">
+              <a class="icon-btn" href="https://www.linkedin.com/in/aliyah-zaizay/" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a class="icon-btn icon-btn--dark" href="mailto:aliyah@example.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a class="icon-btn icon-btn--dark" href="https://github.com/aliyahkzaizay" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="icon-btn icon-btn--gold" href="https://www.instagram.com/aliyahh.kz/" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="open-to">
+              <p><strong>Currently open to:</strong></p>
+              <ul>
+                <li>Software Engineering Internships</li>
+                <li>Site Reliability Engineering (SRE) &amp; DevOps Opportunities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer-left">
+        <p class="footer-name">ALIYAH ZAIZAY</p>
+        <p class="footer-copy">© 2025</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="assets/SWE_AliyahZaizay_Resume.pdf">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" aria-label="Close" data-close-modal>×</button>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__desc" id="modalDesc"></p>
+      <p class="modal__tech" id="modalTech"></p>
+      <a class="btn" id="modalLink" href="#" target="_blank" rel="noreferrer">Open Project</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

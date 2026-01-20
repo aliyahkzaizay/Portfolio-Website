@@ -394,22 +394,34 @@
   }
   
   .project__thumb{
-    height: 130px;
     background:
-      linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.00)),
-      radial-gradient(circle at 30% 20%, rgba(18,138,136,.18), transparent 55%),
-      radial-gradient(circle at 70% 60%, rgba(230,211,180,.5), transparent 60%),
-      #f6f2ea;
-    transition: transform .18s ease, filter .18s ease;
+    linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.00)),
+    radial-gradient(circle at 30% 20%, rgba(214,168,91,.25), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(18,138,136,.18), transparent 60%),
+    #f6f2ea;
+    height: 130px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
   }
-  .project__thumb--alt{
+
+  .project--rpi-dorms .project__thumb {
+    background-image: url("../assets/project-previews/rpi-dorms.png");
+    background-position: center 0.9px;
+  }
+
+
+
+  /* .project__thumb--alt{
     background:
       linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.00)),
       radial-gradient(circle at 30% 20%, rgba(214,168,91,.25), transparent 55%),
       radial-gradient(circle at 70% 60%, rgba(18,138,136,.18), transparent 60%),
       #f6f2ea;
   }
-  
+   */
   .project__body{ padding: 14px 14px 16px; background: #d9c8be; }
   .project__title{
     margin: 0 0 8px;
@@ -437,14 +449,44 @@
     font-weight: 750;
     margin-bottom: 8px;
   }
-  .tech-dots{ display:flex; justify-content:center; gap: 10px; }
-  .tech-dots span{
-    width: 20px;
-    height: 20px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.8);
-    border: 1px solid rgba(0,0,0,.22);
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0.4rem;
   }
+  
+  .tech-icons span {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.85);
+    border: 1px solid rgba(0,0,0,.22);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tech-icons img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .project:hover .tech-icons img {
+    opacity: 1;
+  }
+  
+  .tech-dots span:hover img {
+    transform: translateY(-1px);
+  }
+  
+  
+
+
+
   
   /* ===== About ===== */
   .about-bg{

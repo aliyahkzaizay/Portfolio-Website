@@ -407,10 +407,34 @@
 
   }
 
+  
+
+  .project--NonVisual .project__body {
+    padding-top: 3.25rem;
+    padding-bottom: 5rem;
+    
+  }
+
+  .project--NonVisual .project__thumb {
+    display: none;
+  }
+
+
+  .project--drivesmart .project__thumb {
+    background-image: url("../assets/project-previews/DriveSmartHome.png");
+    background-position: calc(50% - 5px) -5px;
+  }
+
   .project--rpi-dorms .project__thumb {
     background-image: url("../assets/project-previews/rpi-dorms.png");
     background-position: center 0.9px;
   }
+
+  
+
+  
+
+
 
 
 

@@ -253,7 +253,7 @@ function formatETTime() {
   });
 
   const timeStr = fmt.format(new Date());
-  if (etTimeEl) etTimeEl.textContent = `${timeStr} ET`;
+  if (etTimeEl) etTimeEl.textContent = `My current time zone · ${timeStr} ET`;
 }
 
 formatETTime();

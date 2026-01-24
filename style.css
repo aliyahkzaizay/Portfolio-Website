@@ -422,17 +422,17 @@
   
 
   .project--drivesmart .project__thumb {
-    background-image: url("../assets/project-previews/DriveSmartHome.png");
+    background-image: url("./assets/project-previews/DriveSmartHome.png");
     background-position: calc(50% - 5px) -5px;
   }
 
   .project--rpi-dorms .project__thumb {
-    background-image: url("../assets/project-previews/rpi-dorms.png");
+    background-image: url("./assets/project-previews/rpi-dorms.png");
     background-position: center 0.9px;
   }
 
   .project--OSChooser .project__thumb {
-    background-image: url("../assets/project-previews/OSChooser.png");
+    background-image: url("./assets/project-previews/OSChooser.png");
     background-position: center 0.9px;
   }
 

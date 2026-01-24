@@ -407,7 +407,7 @@
 
   }
 
-  
+
 
   .project--NonVisual .project__body {
     padding-top: 3.25rem;
@@ -419,6 +419,7 @@
     display: none;
   }
 
+  
 
   .project--drivesmart .project__thumb {
     background-image: url("../assets/project-previews/DriveSmartHome.png");
@@ -427,6 +428,11 @@
 
   .project--rpi-dorms .project__thumb {
     background-image: url("../assets/project-previews/rpi-dorms.png");
+    background-position: center 0.9px;
+  }
+
+  .project--OSChooser .project__thumb {
+    background-image: url("../assets/project-previews/OSChooser.png");
     background-position: center 0.9px;
   }
 

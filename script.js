@@ -172,7 +172,20 @@ function openModal(data) {
   modalTitle.textContent = data.title || "Project";
   modalDesc.textContent = data.desc || "";
   modalTech.textContent = data.tech ? `Tech: ${data.tech}` : "";
-  modalLink.href = data.link || "#";
+  
+  const link = (data.link || "").trim();
+
+  if (link) {
+    modalLink.href = link;
+    modalLink.style.display = "inline-flex"; 
+    modalLink.removeAttribute("aria-disabled");
+  } else {
+    modalLink.removeAttribute("href");       // prevents navigation
+    modalLink.style.display = "none";        // hides button
+    modalLink.setAttribute("aria-disabled", "true");
+  }
+
+ 
 
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");

@@ -223,24 +223,6 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
-// ===== Contact form demo (still demo) =====
-const contactForm = qs("#contactForm");
-const formNote = qs("#formNote");
-
-contactForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = qs("#name")?.value?.trim();
-  const email = qs("#email")?.value?.trim();
-  const msg = qs("#message")?.value?.trim();
-
-  if (!name || !email || !msg) {
-    formNote.textContent = "Please fill out all fields.";
-    return;
-  }
-
-  formNote.textContent = "Message received! (Demo) — connect this to Formspree/Netlify when ready.";
-  contactForm.reset();
-});
 
 // ===== Live Eastern Time (ET) =====
 const etTimeEl = qs("#etTime");

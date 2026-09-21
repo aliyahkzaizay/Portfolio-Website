@@ -1,29 +1,44 @@
 # Aliyah Zaizay — Portfolio
 
-This is my personal portfolio website showcasing my work in software development, UI/UX design, and data-focused projects.
+React + Vite portfolio with a journal hero, desktop Notes for About, and dark project playlists. Includes scroll pop-ins, photo tilt/flip, swipe navigation, and reduced-motion support.
 
-The site highlights selected projects, a short introduction about me, and ways to connect. It’s designed to be clean, responsive, and accessible across desktop, tablet, and mobile.
+## Run locally
 
-![Portfolio Preview](assets/Portfolio-WebsiteUI.png)
+Use Node.js 22.12 or newer.
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript (as needed)
-- Responsive design (Flexbox / Grid)
+```sh
+npm install
+npm run dev
+```
 
-## Features
-- Responsive layout for desktop, tablet, and mobile
-- Project showcase section
-- About Me section with background and interests
-- Contact / social links
+Open the URL printed by Vite. React requires this development server; opening `index.html` directly will not run the app.
 
-## Live Site
-[]
+## Build and preview
 
-## Status
-Actively evolving — I update this site as I learn and build new projects.
+```sh
+npm run build
+npm run preview
+```
 
----
+The production website is generated in `dist/`.
 
-Feel free to reach out if you’d like to connect or learn more about my work.
+## Editing
+
+- `src/components/Hero.jsx`: intro, contact links, photo placeholder.
+- `src/components/About.jsx`: About notes and work experience.
+- `src/components/Projects.jsx`: playlist UI, swipe gestures, project details.
+- `src/data/projects.js`: project descriptions, links, images, playlist ordering.
+- `src/components/Navigation.jsx` and `Footer.jsx`: site navigation and contacts.
+- `src/styles.css`: shared styles and responsive layouts.
+- `src/motion.js`: animations and reduced-motion behavior.
+- `public/assets/`: static files, including the current resume and project images.
+
+The photo remains a placeholder. New static asset links should use `assetUrl()` so they work under the GitHub Pages repository path.
+
+## GitHub Pages
+
+Vite is configured with `/Portfolio-Website/` as the base URL. In repository **Settings → Pages → Source**, select **GitHub Actions** before deploying. The included workflow builds and publishes `dist/` on pushes to `main`, or on a manual workflow run.
+
+Deployment URL: https://aliyahkzaizay.github.io/Portfolio-Website/
+
+The root `assets/` directory retains older source files; the React application serves static files from `public/assets/`. `idk.html` is an existing draft and is not part of the app.

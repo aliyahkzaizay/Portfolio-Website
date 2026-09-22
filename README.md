@@ -1,6 +1,6 @@
 # Aliyah Zaizay — Portfolio
 
-React + Vite portfolio with a journal hero, desktop Notes for About, and dark project playlists. Includes scroll pop-ins, photo tilt/flip, swipe navigation, and reduced-motion support.
+React + Vite portfolio with a journal hero, desktop Notes for About, and dark project playlists. Includes scroll pop-ins, swipe navigation, and reduced-motion support.
 
 ## Run locally
 
@@ -24,7 +24,7 @@ The production website is generated in `dist/`.
 
 ## Editing
 
-- `src/components/Hero.jsx`: intro, contact links, photo placeholder.
+- `src/components/Hero.jsx`: intro and contact links.
 - `src/components/About.jsx`: About notes and work experience.
 - `src/components/Projects.jsx`: playlist UI, swipe gestures, project details.
 - `src/data/projects.js`: project descriptions, links, images, playlist ordering.
@@ -33,7 +33,7 @@ The production website is generated in `dist/`.
 - `src/motion.js`: animations and reduced-motion behavior.
 - `public/assets/`: static files, including the current resume and project images.
 
-The photo remains a placeholder. New static asset links should use `assetUrl()` so they work under the GitHub Pages repository path.
+New static asset links should use `assetUrl()` so they work under the GitHub Pages repository path.
 
 ## GitHub Pages
 

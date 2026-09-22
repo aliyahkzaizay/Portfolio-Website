@@ -98,3 +98,10 @@ html{scroll-behavior:smooth}body{margin:0}button,a{touch-action:manipulation}img
 
 
 #az-worlds .photo-symbol{font-size:42px}
+
+/* Center the journal hero at every screen size. */
+#az-worlds .journal { text-align: center; }
+#az-worlds .journal-top,
+#az-worlds .journal .contact-links,
+#az-worlds .journal-stamps { justify-content: center; }
+#az-worlds .journal .intro { margin-inline: auto; }

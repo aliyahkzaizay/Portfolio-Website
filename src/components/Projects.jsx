@@ -102,7 +102,7 @@ export default function Projects() {
     <article className="project-details" id="az-project-details" aria-live="polite">
       <div className="label">Project details</div><div className="details-grid">
         <div data-pop><h3 data-detail-title>{project.title}</h3><p data-detail-description>{project.description}</p><p className="detail-tech" data-detail-tech>{project.tech}</p>
-          {project.link ? <a className="detail-link" data-detail-link href={project.link} target="_blank" rel="noopener">{selected === 'os' ? 'Open Figma prototype ↗' : 'View repository ↗'}</a> : <p data-link-missing>No public project link available yet.</p>}
+          {project.link ? <a className="detail-link" data-detail-link href={project.link} target="_blank" rel="noopener">{project.linkLabel || (selected === 'os' ? 'Open Figma prototype ↗' : 'View repository ↗')}</a> : <p data-link-missing>No public project link available yet.</p>}
         </div>
         <div data-pop>{preview(true)}<div className="detail-notes" data-detail-notes>{project.notes}</div></div>
       </div>

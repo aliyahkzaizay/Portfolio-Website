@@ -22,7 +22,8 @@ export const projects = {
     "kind": "Event website · Ongoing",
     "description": "A hackathon website with schedules, rules, registration information, and participant resources.",
     "tech": "React • JavaScript • Netlify",
-    "link": "",
+    "link": "https://nshrpi.org",
+    "linkLabel": "Visit website ↗",
     "notes": "Built and deployed the event site. Working with NSBE and SHPE organizers to keep information clear and up to date.",
     "image": ""
   },
@@ -31,7 +32,8 @@ export const projects = {
     "kind": "Frontend · Marketing website",
     "description": "A landing page for an early-stage NYC nightlife discovery product.",
     "tech": "React • TypeScript • Vite • Tailwind CSS • Vercel",
-    "link": "https://github.com/aliyahkzaizay/pulse-nyc-website",
+    "link": "https://pulse-nyc-website.vercel.app/",
+    "linkLabel": "Visit website ↗",
     "notes": "The marketing website introduces the product and its nightlife discovery concept.",
     "image": ""
   },
